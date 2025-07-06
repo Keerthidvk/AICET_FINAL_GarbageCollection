@@ -1,45 +1,57 @@
-# 🗑️ Garbage Classification with Deep Learning
+# 🧠 Smart Garbage Classification with Deep Learning
 
-This project is about building an AI-based system to automatically classify garbage images into different categories, like plastic, metal, paper, etc. The goal is to make waste segregation smarter and faster, supporting better recycling practices.
+Let’s face it—waste segregation can be a real mess. So why not let AI handle the dirty work? This project uses deep learning to **automatically classify garbage images** into categories like plastic, paper, metal, and more, making recycling smarter, faster, and more efficient. ♻️
+
+---
 
 ## 🌟 What’s Inside
-- A deep learning model based on **EfficientNetV2B2**
-- Custom layers on top for trash classification
-- Gradio interface for easy, real-time image predictions
-- Visual performance reports using confusion matrix and heatmaps
-- Code that’s simple and easy to extend
 
-## 🔧 Tech Stack
-- **Python**
-- **TensorFlow / Keras**
-- **EfficientNetV2B2** (transfer learning)
-- **scikit-learn**
-- **matplotlib + seaborn** (for charts)
-- **Gradio** (for the interactive interface)
-- **Jupyter Notebook**
+* 🔍 A powerful image classifier built on **EfficientNetV2B2**
+* 🧱 Custom classification layers tuned for trash detection
+* 🖼️ **Gradio interface** to test images in real-time — just drag, drop, and predict!
+* 📊 Visual insights with **confusion matrices** and **heatmaps**
+* 🧠 Clean, modular code that’s easy to understand and expand
 
-## 📂 Dataset
-The model was trained on an image dataset of various trash types.  
-- Images resized to 124×124 pixels  
-- Data split: 80% training, 20% validation  
-- Loaded using TensorFlow’s `image_dataset_from_directory`  
+---
 
-## 📝 How It Works
-1. **Load and prepare the data**  
-   Resize, batch, shuffle, cache, and prefetch the dataset.
+## 🧰 Tech Stack
 
-2. **Build the model**  
-   Use EfficientNetV2B2 as a base, add dropout and dense layers for classification.
+* **Python** (of course!)
+* **TensorFlow / Keras** for model building and training
+* **EfficientNetV2B2** – transfer learning that packs a punch
+* **scikit-learn** for metrics and reports
+* **matplotlib + seaborn** for visualization
+* **Gradio** for the interactive UI
+* **Jupyter Notebook** for development and experimentation
 
-3. **Train the model**  
-   Optimizer: Adam  
-   Loss: Categorical crossentropy  
-   Callbacks: EarlyStopping, ReduceLROnPlateau  
+---
 
-4. **Evaluate performance**  
-   Generate confusion matrix, classification report, and plots.
+## 📂 The Dataset
 
-5. **Deploy**  
-   Serve predictions through a simple Gradio web app.
+The model is trained on a curated dataset of labeled trash images, resized to **124×124 pixels** for consistency.
 
+* 🧪 Split: 80% for training, 20% for validation
+* 📦 Loaded using `image_dataset_from_directory` in TensorFlow
+
+---
+
+## 🛠️ How It Works
+
+1. **Data Preparation**
+   The images are resized, batched, shuffled, cached, and prefetched for performance.
+
+2. **Model Building**
+   EfficientNetV2B2 serves as the backbone. On top, we’ve added dropout layers and dense layers to fine-tune it for garbage classification.
+
+3. **Training**
+
+   * Optimizer: **Adam**
+   * Loss Function: **Categorical Crossentropy**
+   * Callbacks: **EarlyStopping**, **ReduceLROnPlateau** to avoid overfitting
+
+4. **Evaluation**
+   The model is evaluated using a **confusion matrix**, **classification report**, and visual performance plots.
+
+5. **Deployment**
+   Everything is wrapped up in a clean Gradio app so you can classify trash images right from your browser!
 
